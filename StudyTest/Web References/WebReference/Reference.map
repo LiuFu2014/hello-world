@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.4.69.71:8989/wcf/metadata?xsd=xsd1" filename="metadata.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.4.69.71:8989/wcf/metadata" filename="Service1.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.4.69.71:8989/wcf/metadata?xsd=xsd2" filename="metadata0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.4.69.71:8989/wcf/metadata?xsd=xsd0" filename="metadata1.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>
