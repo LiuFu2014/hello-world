@@ -23,7 +23,7 @@ namespace StudyTest
     public partial class Form1 : Form
     {
         SQLHelp sqlHelp = new SQLHelp();
-        
+
         TimeOfDay n = TimeOfDay.Morning;
         Dictionary<int, string> dictionary = new Dictionary<int, string>();
 
@@ -95,7 +95,7 @@ namespace StudyTest
             MessageBox.Show(m.Capacity.ToString());
 
             int aa = 0;
-          
+
         }
 
         private int BtoInt(string c)
@@ -132,7 +132,7 @@ namespace StudyTest
                 //item.GetMethodBody
                 foreach (var item2 in item.GetParameters())
                 {
-                    
+
                 }
             }
             if (test.GetType() == typeof(c_Test))
@@ -178,7 +178,10 @@ namespace StudyTest
             if (txt_Test.InvokeRequired)
             {
                 Action<object> a = new Action<object>(DelegateSetValue);
-                txt_Test.Invoke(a, txt);
+                while (true)
+                {
+                    txt_Test.Invoke(a, DateTime.Now);
+                }
             }
             else
             {
@@ -188,7 +191,13 @@ namespace StudyTest
 
         void DelegateSetValue(object obj)
         {
-            this.txt_Test.Text = obj.ToString();
+            //while (true)
+            //{
+                this.txt_Test.Text = obj.ToString();
+                //Application.DoEvents();
+                //Thread.Sleep(1000);  
+            //}
+
         }
 
         /// <summary>
@@ -292,6 +301,17 @@ namespace StudyTest
             b(new Derived());//协变
             Func<Base, Base> c = (m) => m;
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txt_Test.Text = DateTime.Now.ToString();
+            Thread.Sleep(1000);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
         }
     }
     class Base
