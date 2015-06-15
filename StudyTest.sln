@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBackUpOrRestore", "SqlBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadTest", "ThreadTest\ThreadTest.csproj", "{4ACAC7D4-B008-45CD-ABE5-03CAA08B00C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool", "ThreadPool\ThreadPool.csproj", "{CD648006-0BBE-4918-AE22-B0BB6196F2AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4ACAC7D4-B008-45CD-ABE5-03CAA08B00C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ACAC7D4-B008-45CD-ABE5-03CAA08B00C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ACAC7D4-B008-45CD-ABE5-03CAA08B00C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD648006-0BBE-4918-AE22-B0BB6196F2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD648006-0BBE-4918-AE22-B0BB6196F2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD648006-0BBE-4918-AE22-B0BB6196F2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD648006-0BBE-4918-AE22-B0BB6196F2AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
