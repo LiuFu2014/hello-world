@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fb928f5065e747b79b0b358cb2603956" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="XinYaDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_CommonTypeConfigM" Width="1.5" PointX="5.25" PointY="87.375" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_CommonTypeConfigS" Width="1.5" PointX="7.5" PointY="79.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_Components" Width="1.5" PointX="7.5" PointY="68.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_Exception" Width="1.5" PointX="5.25" PointY="58.875" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_Fenleibianma" Width="1.5" PointX="5.25" PointY="80.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_KeyComponentsInfo" Width="1.5" PointX="5.25" PointY="84.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_LEDText" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_LoginRecord" Width="1.5" PointX="5.25" PointY="67.375" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_MatCodeKeyComLink" Width="1.5" PointX="10.5" PointY="75.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_MatComSuplConn" Width="1.5" PointX="15.75" PointY="67.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_MaterialInfo" Width="1.5" PointX="13.5" PointY="48.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_MonthPlanForLED" Width="1.5" PointX="21" PointY="80.875" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_PalletInfo" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_PLCAdressWithStopper" Width="1.5" PointX="9" PointY="39.375" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_PLCAdressWithWorkStationInfo" Width="1.5" PointX="6.75" PointY="46.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_PLCBaseAdressInfo" Width="1.5" PointX="11.25" PointY="45" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_ProcessRouteM" Width="1.5" PointX="5.25" PointY="71.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_ProcessRouteP" Width="1.5" PointX="7.5" PointY="74.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_ProductionPlan" Width="1.5" PointX="15.75" PointY="78.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_ProductionPlanFromERP" Width="1.5" PointX="18.75" PointY="80.375" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_QCRecord" Width="1.5" PointX="7.5" PointY="62.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_RepairRecord" Width="1.5" PointX="21" PointY="67.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_ScanRecord" Width="1.5" PointX="24" PointY="70.875" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_SecondWorkStationInfo" Width="1.5" PointX="9" PointY="43.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_Supplier" Width="1.5" PointX="10.5" PointY="69.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_SystemLog" Width="1.5" PointX="5.25" PointY="52.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_User" Width="1.5" PointX="3" PointY="58.75" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_UserLoginRight" Width="1.5" PointX="11.25" PointY="58.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkClasses" Width="1.5" PointX="0.75" PointY="62.25" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkDtl" Width="1.5" PointX="18.75" PointY="74.875" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkDtlForEachStation" Width="1.5" PointX="5.25" PointY="63.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkException" Width="1.5" PointX="24" PointY="66.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkMain" Width="1.5" PointX="10.25" PointY="62.5" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkStationInfo" Width="1.5" PointX="6.75" PointY="42.25" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkTime" Width="1.5" PointX="15.75" PointY="74.625" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkTimeBandingInfo" Width="1.5" PointX="8.25" PointY="58.375" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkTimeM" Width="1.5" PointX="5.25" PointY="97.125" />
+        <EntityTypeShape EntityType="XinYaDBModel.TB_WorkTimeS" Width="1.5" PointX="10.5" PointY="78.625" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_CommonTypeConfigM_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_CommonTypeConfigS_TB_CommonTypeConfigM" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MaterialInfo_TB_CommonTypeConfigM" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_CommonTypeConfigS_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Components_TB_Fenleibianma" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Components_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Components_TB_User1" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MatComSuplConn_TB_Components" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Exception_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_QCRecord_TB_Exception" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_RepairRecord_TB_Exception" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtl_TB_Exception" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkException_TB_Exception" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Fenleibianma_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Supplier_TB_Fenleibianma" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_KeyComponentsInfo_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MatCodeKeyComLink_TB_KeyComponentsInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_LoginRecord_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_LoginRecord_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MatCodeKeyComLink_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MatComSuplConn_TB_Supplier" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MatComSuplConn_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MaterialInfo_TB_ProcessRouteM" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MaterialInfo_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MaterialInfo_TB_User1" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MaterialInfo_TB_WorkTimeM" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProductionPlan_TB_ProductionPlan" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProductionPlanFromERP_TB_MaterialInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtl_TB_MaterialInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTime_TB_MaterialInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_MonthPlanForLED_TB_ProductionPlanFromERP" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_PLCBaseAdressInfo_TB_PLCAdressWithStopper" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_SecondWorkStationInfo_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_PLCBaseAdressInfo_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProcessRouteM_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProcessRouteP_TB_ProcessRouteM" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProcessRouteP_TB_WorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProductionPlan_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ProductionPlanFromERP_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_QCRecord_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_QCRecord_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_QCRecord_TB_WorkDtlForEachStation" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_RepairRecord_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_RepairRecord_TB_WorkDtl" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ScanRecord_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ScanRecord_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_ScanRecord_TB_WorkDtl" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_SecondWorkStationInfo_TB_WorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_UserLoginRight_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtl_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtlForEachStation_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkException_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkMain_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkMain_TB_SecondWorkStationInfo1" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTime_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeBandingInfo_TB_SecondWorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Supplier_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_Supplier_TB_User1" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_SystemLog_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_User_TB_WorkClasses" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_UserLoginRight_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtl_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkException_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkHis_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkMain_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkMain_TB_User1" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTime_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeBandingInfo_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeBandingInfo_TB_UserRecorder" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeM_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeS_TB_User" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtl_TB_WorkMain" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkException_TB_WorkDtl" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkDtlForEachStation_TB_WorkMain" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeS_TB_WorkStationInfo" />
+        <AssociationConnector Association="XinYaDBModel.FK_TB_WorkTimeS_TB_WorkTimeM" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

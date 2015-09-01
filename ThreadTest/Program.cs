@@ -17,7 +17,7 @@ namespace ThreadTest
             #region MyRegion
 
             int[] numbers = { 5, 10, 8, 3, 6, 12 };
-            IEnumerable<int> numQuery1 = from num in numbers   where num % 2 == 0   orderby num select num;
+            IEnumerable<int> numQuery1 = from num in numbers where num % 2 == 0 orderby num select num;
             var m = numbers.Where(p => p % 2 == 0).OrderBy(p => p);
 
             string[] words = { "the", "quick", "brown", "fox", "jumps" };
@@ -31,18 +31,22 @@ namespace ThreadTest
 
 
             A a = new A();
+            //A.index = 3;
 
             Thread b = new Thread(new ParameterizedThreadStart(main.LockTest));
             Thread c = new Thread(new ParameterizedThreadStart(main.LockTest));
             BackgroundWorker d = new BackgroundWorker();
+            b.Name = "A";
+            c.Name = "C";
+
             //main.Thread1();
 
             b.Start(a);
             c.Start(a);
             while (true)
             {
-                a.X++;
-                Console.WriteLine(a.X);
+                Thread.Sleep(100);
+                //Console.WriteLine(a.name);
             }
 
             d.WorkerReportsProgress = true;
@@ -114,17 +118,39 @@ namespace ThreadTest
                 Console.WriteLine("C");
             }
         }
+        int i = 0;
 
         private void LockTest(object a)
         {
             object c = new object();
-            lock (c)
+            lock (a)
             {
-                A b = (A)a;
-                while (true)
+                try
                 {
-                    b.X++;
-                    Console.WriteLine(b.X);
+                    A b = (A)a;
+                    while (true)
+                    {
+                        b.name = Thread.CurrentThread.Name;
+                        Thread.Sleep(100);
+                        Console.WriteLine(Thread.CurrentThread.Name + b.name+this.GetType().Name.ToString());
+                        //Thread.CurrentThread.Abort();
+                        //A.index++;
+                        //Console.WriteLine(A.index.ToString());
+                        if (i == 30)
+                        {
+                            i = 0;
+                            break;
+                        }
+                        else
+                        {
+                            i++;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.GetType().ToString());
+
                 }
             }
         }
@@ -132,7 +158,7 @@ namespace ThreadTest
 
     class A
     {
-        public long X = 0;
-
+        public string name = "";
+        public static int index = 0;
     }
 }

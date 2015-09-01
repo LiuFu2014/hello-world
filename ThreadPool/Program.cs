@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Threading;
-
+/*
+ * 本例使用嵌入ManualResetEvent到对象，然后使用
+ * WaitHandle.WaitAll(doneEvents);促发等待的对象。
+ * 
+*/
 public class Fibonacci
 {
     private int _n;

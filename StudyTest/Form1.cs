@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudyTest.Properties;
+using System.Data.SqlClient;
 
 namespace StudyTest
 {
@@ -149,7 +150,10 @@ namespace StudyTest
 
         private void button3_Click(object sender, EventArgs e)
         {
-            sqlHelp.Procedure("pro_UpdateTB_PLCBaseAdressInfo", 2355, 5);
+            int ID = 1;
+            int Data = 2;
+            SqlParameter[] a = new SqlParameter[] { new SqlParameter("@ID", ID), new SqlParameter("@Data", Data) };
+            sqlHelp.Procedure("pro_UpdateTB_PLCBaseAdressInfo", a);
             DataTable dt = sqlHelp.SerBySQLDatatable("select * from TB_User");
             dataGridView1.DataSource = dt;
             MessageBox.Show(dt.Rows[0][6].ToString());
@@ -172,8 +176,8 @@ namespace StudyTest
         public void SetTxtValue(object txt)
         {
             //txt_Test.Text = (string)txt;
-            //InvokeRequired属性指示是否为创建的线程访问他:如果控件的 Handle 是在与调用线程不同的线程上创建的（说明您必须通过 Invoke 方法对控件进行调用），
-            //则为 true；否则为 false。 
+            //InvokeRequired属性指示是否为创建的线程访问他:如果控件的 Handle(句柄) 是在与调用线程不同的线程上创建的（说明您必须通过 Invoke 方法对控件进行调用），
+            //则为 true（不同现场）；否则为 false（相同线程）。 
             //如果大量控件需要这个用法的话，可以使用自定义控件继承
             if (txt_Test.InvokeRequired)
             {
@@ -193,9 +197,9 @@ namespace StudyTest
         {
             //while (true)
             //{
-                this.txt_Test.Text = obj.ToString();
-                //Application.DoEvents();
-                //Thread.Sleep(1000);  
+            this.txt_Test.Text = obj.ToString();
+            //Application.DoEvents();
+            //Thread.Sleep(1000);
             //}
 
         }
@@ -312,6 +316,19 @@ namespace StudyTest
         private void button10_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ServiceReference2.Service1Client sc = new ServiceReference2.Service1Client();
+            DateTime dt = DateTime.Now;
+            ServiceReference2.ModelInfo mi = sc.GetModelInfoByWorkNum(148);
+            ServiceReference2.ModelInfoWithSecondModelInfo mw = sc.GetModelInfoWithSecondModelInfoByWorkNum(148);
+            ServiceReference2.SecondModelInfo[] sm = sc.GetSecondModelInfoByModelInfoBarcode("CNHDJ");
+            DateTime dt2 = DateTime.Now;
+            TimeSpan s = dt2 - dt;
+            MessageBox.Show(s.ToString());
         }
     }
     class Base

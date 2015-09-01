@@ -21,7 +21,7 @@ namespace StudyTest
                 using (SqlConnection con = new SqlConnection(_constr))
                 {
                     con.Open();
-                    SqlCommand com = new SqlCommand(sql,con);
+                    SqlCommand com = new SqlCommand(sql, con);
                     SqlDataReader sqlreader = com.ExecuteReader();
                     while (sqlreader.Read())
                     {
@@ -34,7 +34,7 @@ namespace StudyTest
             }
             catch (Exception)
             {
-                
+
             }
             return datset;
         }
@@ -49,7 +49,7 @@ namespace StudyTest
             try
             {
                 DataTable dt = new DataTable();
-                using (SqlConnection conn=new SqlConnection(_constr))
+                using (SqlConnection conn = new SqlConnection(_constr))
                 {
                     conn.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
@@ -70,15 +70,16 @@ namespace StudyTest
         /// <param name="ID">The identifier.</param>
         /// <param name="Data">The data.</param>
         /// <returns></returns>
-        public int Procedure(string proName,int ID,int Data)
+        public int Procedure(string proName, SqlParameter[] para)
         {
-            using (SqlConnection conn=new SqlConnection(_constr))
+            using (SqlConnection conn = new SqlConnection(_constr))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(proName, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@ID",ID));
-                cmd.Parameters.Add(new SqlParameter("@Data", Data));
+                //cmd.Parameters.Add(new SqlParameter("@ID",ID));
+                //cmd.Parameters.Add(new SqlParameter("@Data", Data));
+                cmd.Parameters.Add(para);
                 cmd.ExecuteNonQuery();
 
             }
@@ -92,7 +93,7 @@ namespace StudyTest
         public void UpdateByDt(DataTable dt)
         {
             if (_constr == null) return;
-            using (SqlConnection conn=new SqlConnection(_constr))
+            using (SqlConnection conn = new SqlConnection(_constr))
             {
                 conn.Open();
                 //SqlDataAdapter da = new SqlDataAdapter(conn,);

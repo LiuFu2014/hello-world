@@ -14,6 +14,7 @@ namespace StudyTest
     public partial class Form2 : Form
     {
         public int int_Test { get; set; }
+
         public Form2()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace StudyTest
                 //label2.Text = i.ToString();
                 //int_Test = 6;
                 Thread.Sleep(50);
-                backgroundWorker1.ReportProgress(i);
+                backgroundWorker1.ReportProgress(1);
             }
      
             //Thread.Sleep(2000);
@@ -71,7 +72,7 @@ namespace StudyTest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello");
+            MessageBox.Show("hello"+e.ToString()+" "+sender.ToString()+" "+sender.GetType().ToString());
         }
     }
 }
